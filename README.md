@@ -24,6 +24,16 @@ Now install `clang-format.hook` from this repository into your repo's `.git/hook
 
 `cp githook-clang-format/clang-format.hook myrepo/.git/hooks/pre-commit`
 
+Alternatively,
+it's possible when already inside your repo,
+simply download the script to your git hooks like this
+(don't forget to make the script executable):
+
+```zsh
+curl -Lo '.git/hooks/pre-commit' https://raw.githubusercontent.com/ShellTux/githook-clang-format/master/clang-format.hook
+chmod u+x .git/hooks/pre-commit
+```
+
 ## Usage
 Once the pre-commit hook is installed, `clang-format` will be run on each file included in the commit when you run `git commit`.
 
